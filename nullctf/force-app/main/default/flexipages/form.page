@@ -1,0 +1,24 @@
+<apex:page controller="CTFChallengeController">
+    <h1>Capture The Flag Challenge</h1>
+    
+    <!-- Hint -->
+    <p>Hint: The flag format is CTF{example_flag} but the correct flag value is inside curly braces. Pay attention to all the details!</p>
+    
+    <!-- Form to submit the flag -->
+    <apex:form >
+        <!-- Input for the flag with a label -->
+        <apex:inputText value="{!submittedFlag}" label="Enter Flag" />
+        
+        <!-- Command Button to submit the form and trigger the Apex method -->
+        <apex:commandButton value="Don't click me" action="{!validateFlag}" reRender="resultPanel" />
+        
+        <!-- Output Panel to display the result after flag submission -->
+        <apex:outputPanel id="resultPanel">
+            <h2>{!resultMessage}</h2>
+        </apex:outputPanel>
+    </apex:form>
+
+    <p style="font-size: small; color: gray; text-align: center;">
+        Null Hyderabad Community /resource/1729604447000/Hint
+    </p>
+</apex:page>
